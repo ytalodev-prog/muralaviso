@@ -20,7 +20,7 @@ Abra `http://localhost:3000`. Os dados locais ficam em `data/store.json` e não 
 O frontend é servido como arquivo estático e as rotas em `api/` são funções serverless. Para persistir contas e avisos entre execuções, a versão publicada usa Supabase; o arquivo local não é usado na Vercel. O servidor local `server.js` é excluído do deploy para a Vercel não tentar executá-lo como entrada serverless.
 
 1. Crie um projeto no Supabase e execute [`supabase/schema.sql`](./supabase/schema.sql) no SQL Editor.
-2. Importe este projeto na Vercel, selecionando **Other** como framework. Não é necessário configurar comando de build ou dependências adicionais.
+2. Importe este projeto na Vercel usando **Other** como framework. O `vercel.json` já configura esse preset e a pasta `public` como saída; as funções em `api/` são detectadas automaticamente. Não é necessário configurar comando de build ou dependências adicionais.
 3. Adicione estas variáveis em **Project Settings → Environment Variables**:
    - `SUPABASE_URL`: URL do projeto Supabase.
    - `SUPABASE_SERVICE_ROLE_KEY`: chave `service_role` do Supabase. Mantenha-a apenas na Vercel; nunca a coloque no frontend.
