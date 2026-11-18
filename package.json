@@ -1,0 +1,12 @@
+{
+  "name": "central-de-avisos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Uma central simples para publicar e receber avisos.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
